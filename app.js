@@ -24,17 +24,16 @@ const recentMemberJoins = [{
     }
 ];
 
-const h3Member = document.getElementsByClassName("newMembers")[0]
-const createDiv = document.createElement("div")
-const createSecondDiv = document.createElement("div")
-const createThirdDiv = document.createElement("div")
-const createImg = document.createElement('img')
-const createP = document.createElement('p')
-const createLink = document.createElement('a')
-
 const newMembers = () => {
 
     for (i = 0; i < recentMemberJoins.length; i++) {
+        let h3Member = document.getElementsByClassName("newMembers")[0]
+        let createDiv = document.createElement("div")
+        let createSecondDiv = document.createElement("div")
+        let createThirdDiv = document.createElement("div")
+        let createImg = document.createElement('img')
+        let createP = document.createElement('p')
+        let createLink = document.createElement('a')
         const recentMemberJoin = recentMemberJoins[i]
         // console.log(recentMemberJoin)
         createDiv.classList.add('members-container')
@@ -45,13 +44,15 @@ const newMembers = () => {
         createLink.textContent = recentMemberJoin.email
         createLink.href= '#'
         createThirdDiv.textContent=recentMemberJoin.lastPost
+
+        h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
+        createDiv.appendChild(createImg);
+        createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
+        createSecondDiv.appendChild(createP)
+        createSecondDiv.appendChild(createLink)
+        createDiv.appendChild(createThirdDiv)
     }      
-    h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
-    createDiv.appendChild(createImg);
-    createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
-    createSecondDiv.appendChild(createP)
-    createSecondDiv.appendChild(createLink)
-    createDiv.appendChild(createThirdDiv)
+
 }
 
 newMembers();
