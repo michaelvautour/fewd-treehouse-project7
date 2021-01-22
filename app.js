@@ -24,8 +24,9 @@ const recentMemberJoins = [{
     }
 ];
 
-const newMembers = () => {
 
+
+const newMembers = () => {
     for (i = 0; i < recentMemberJoins.length; i++) {
         let h3Member = document.getElementsByClassName("newMembers")[0]
         let createDiv = document.createElement("div")
@@ -51,42 +52,9 @@ const newMembers = () => {
         createSecondDiv.appendChild(createP)
         createSecondDiv.appendChild(createLink)
         createDiv.appendChild(createThirdDiv)
+        // console.log(createThirdDiv)
     }      
-
 }
 
 newMembers();
 
-// const tryFudge = () => {
-//     for (i = 0; i < recentMemberJoins.length; i++) {
-//         // console.log(recentMemberJoins[i])
-//         createDiv.classList.add("Whatever")
-//         createDiv.textContent = recentMemberJoins[i].lastPost
-//         let next = document.getElementsByClassName("Whatever")[i]
-//         next.parentNode.insertBefore(createDiv, next.nextSibling);
-//         h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);       
-
-//     }
-// }
-
-// tryFudge()
-// Below is working, now going to make a for loop to expand beyond first member
-// const newMembers = () => {
-//     // const recentMemberJoin = recentMemberJoins[i]
-
-//     createDiv.classList.add('members-container')
-//     createImg.classList.add('profile-image')
-//     createImg.src= recentMemberJoins[0].img;
-//     h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
-//     createDiv.appendChild(createImg);
-//     createSecondDiv.classList.add("members-text")
-//     createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
-//     createP.textContent = recentMemberJoins[0].pName
-//     createSecondDiv.appendChild(createP)
-//     createLink.textContent = recentMemberJoins[0].email
-//     createLink.href= '#'
-//     createSecondDiv.appendChild(createLink)
-//     createThirdDiv.textContent=recentMemberJoins[0].lastPost
-//     createDiv.appendChild(createThirdDiv)
-
-// }
