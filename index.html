@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="grid-container">
 
     <!-- Top header of program -->
     <header>
@@ -40,7 +40,7 @@
     </header>
 
     <!-- Nav bars, in mobile at the top, in desktop this will be on the side -->
-    <nav>
+    <nav class="nav">
         <a href="index.html"><img src="icons/icon-dashboard.svg" alt="Dashboard icon"></a>
         <a href="index.html"><img src="icons/icon-members.svg" alt="Dashboard icon"></a>
         <a href="index.html"><img src="icons/icon-visits.svg" alt="Dashboard icon"></a>
@@ -48,7 +48,7 @@
 
     </nav>
 
-<main>
+<main class="main">
 
 <!-- Main screen area -->
 
@@ -226,7 +226,7 @@
         </div>
     </section>
 
-        <!-- messaging widget -->
+    <!-- messaging widget -->
     <section class="message">
         <h3>Messager User</h3>
 
@@ -236,12 +236,26 @@
             <button class="button-primary" id="send">Send</button>
         </form>
 
-
-
-
-
-
     </section>
+
+    <!--  local settings widget   -->
+
+    <section>
+        <h3>Settings</h3>
+
+        <!-- Custom CSS toggle code -->
+
+        <select class="form-field" id ="tiemzone">
+            <option disabled selected>Select a Timezone</option>
+            <option>Eastern</option>
+            <!-- List more options -->
+        </select>
+        <div class="settings-button">
+            <button class="button-primary" id="save">Save</button>
+            <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
+    </section>
+
 
 </main>
 
