@@ -56,9 +56,11 @@ header .bell-icn {
     flex-grow: 1;
     flex-basis: 25%;
 } */
+
+
 /* Media Queries for larger screens */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas:
@@ -88,4 +90,4 @@ header .bell-icn {
     .widget-container-full, .widget-container-half {
         width: 95vw;
     }
-}
+} */
