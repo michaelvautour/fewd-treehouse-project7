@@ -26,8 +26,7 @@ header .bell-icn {
       "main";
 }
 
-
-.header-1 {
+.header {
     grid-area: header;
 }
 
@@ -39,8 +38,27 @@ header .bell-icn {
     grid-area: main;
 }
 
-/* Layout of objects */
+/* Header Layout */
 
+.header {
+    display: flex; 
+}
+
+.header-1 {
+    flex-grow: 1;
+}
+.header-2 {
+    flex-grow: 1;
+}
+.bell-icn {
+    flex-grow: 1;
+}
+
+.user {
+    flex-grow: 1;
+    /* float: left; */
+
+}
 /* Media Queries for larger screens */
 
 @media (min-width: 768px) {
