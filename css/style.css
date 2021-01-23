@@ -108,7 +108,7 @@ nav img {
     margin-bottom: 15px;
 }
 
-/* Style Dashboard Search */
+/* Style Dashboard/Traffic Search */
 
 .headline {
     text-align: center;
@@ -117,7 +117,6 @@ nav img {
 
 .main-header-search {
     text-align: center;
-    /* font-family: fantasy; */
 }
 
 input[type=search] {
@@ -135,11 +134,50 @@ input[type=search] {
 }
 
 
-/* Button Configuration */
+.traffic h3 {
+    color: grey;
+    align-items: center;
+    margin-bottom: -40px;
+}
 
-/* .traffic-nav-link {
-    
-} */
+/* Button Configuration */
+.traffic-nav {
+    text-align: center;
+}
+
+.traffic-nav-link {
+    font-size: 0.65em;
+    color: black;
+    text-transform: uppercase;
+    padding: 0.75em 1.5em;
+    border-radius: 1.25em;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: auto;
+  }
+  
+.traffic-nav-link:hover {
+    background-color: #5ccf95;
+}
+
+.selected {
+    background-color: #5ccf95;
+    font-weight: bold;
+    color: white
+}
+
+/* Charts */
+
+#traffic-chart {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.traffic {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 
 /* Media Queries for larger screens */
 
@@ -179,10 +217,28 @@ input[type=search] {
     nav img {
         padding-left: 5px;
     }
+
+    .traffic-nav {
+        text-align: right;
+    }
+
+    .traffic-nav-link {
+        font-size: 0.85em;
+
+
 }
 
 @media (min-width: 1024px) {
-    .widget-container-full, .widget-container-half {
+    /* .widget-container-full, .widget-container-half {
         width: 80vw;
+    } */
+
+    .headline {
+        text-align: left;
+        padding-left: 35px;
     }
-}
+
+    .main-header {
+        display: flex;
+    }
+}}
