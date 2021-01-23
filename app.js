@@ -24,6 +24,33 @@ const recentMemberJoins = [{
     }
 ];
 
+const recentActivity = [{
+    img: "img/member-1.jpg",
+    pName: "Kara Ace",
+    comment: "commented on the importance of So Say We All",
+    time: "2 hours ago"
+    },
+
+    {img: "img/member-2.jpg",
+    pName: "Jeffery Sheridan",
+    comment: "liked the post Babylon 5 greatest characters!",
+    time: "3 hours ago"
+    },
+
+    {img: "img/member-3.jpg",
+    pName: "Eliza Curator",
+    comment: "commented Spike & Angel join the avengers",
+    time: "5 hours ago"
+    },
+
+    {img: "img/member-4.jpg",
+    pName: "Sami Tarsa",
+    comment: "sami.tarsa@madeupurl.com",
+    time: "on how Castiel faced off against Chuck"
+    }
+];
+
+
 const newMembers = () => {
     for (i = 0; i < recentMemberJoins.length; i++) {
         let h3Member = document.getElementsByClassName("newMembers")[0]
@@ -33,7 +60,6 @@ const newMembers = () => {
         let createImg = document.createElement('img')
         let createP = document.createElement('p')
         let createLink = document.createElement('a')
-        var referenceNode = document.getElementsByClassName('members-container')
         const recentMemberJoin = recentMemberJoins[i]
 
         // creates the elements
@@ -56,9 +82,42 @@ const newMembers = () => {
         // below inserts the first index into the dom
         h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
         // below inserts index > 0 into the DOM positioning
+        var referenceNode = document.getElementsByClassName('members-container')
         referenceNode[i].parentNode.insertBefore(createDiv, referenceNode[i].nextSibling);
     }      
 }
 
 newMembers();
 
+const newPosts = () => {
+    for (i = 0; i < recentMemberJoins.length; i++) {
+        let h3Activity = document.getElementsByClassName("newActivity")[0]
+        let createDiv = document.createElement("div")
+        let createSecondDiv = document.createElement("div")
+        let createImg = document.createElement('img')
+        let createP = document.createElement('p')
+        let secondP = document.createElement('p')
+        const recentMemberJoin = recentMemberJoins[i]
+
+        // creates the elements
+        createDiv.classList.add('recent-container')
+        createImg.classList.add('profile-image')
+        createImg.src= recentMemberJoin.img;
+        createSecondDiv.classList.add("recent-text")
+        createP.textContent = recentMemberJoin.pName
+        createLink.textContent = recentMemberJoin.comment
+        secondP.textContent = recentMemberJoin.time
+
+    
+        // inserts the elements into the DOM
+        createDiv.append(createImg);
+        createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
+        createSecondDiv.append(createP)
+        createSecondDiv.append(secondP)
+        // below inserts the first index into the dom
+        h3Activity.parentNode.insertBefore(createDiv, h3Activity.nextSibling);
+        // below inserts index > 0 into the DOM positioning
+        var referenceNode = document.getElementsByClassName('recent-container')
+        referenceNode[i].parentNode.insertBefore(createDiv, referenceNode[i].nextSibling);
+}
+}
