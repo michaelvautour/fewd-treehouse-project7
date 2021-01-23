@@ -1,7 +1,7 @@
-function lineChart() {
+function trafficLineChart() {
 let ctx = document.getElementById('myChart');
 let myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line', // Types of charts: line, bar, radar, doughnut & pie, polar area, bubble, scatter
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
@@ -38,4 +38,4 @@ let myChart = new Chart(ctx, {
 })
 }
 
-lineChart()
+trafficLineChart()
