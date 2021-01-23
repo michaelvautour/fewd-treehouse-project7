@@ -134,6 +134,13 @@ input[type=search] {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+
+/* Button Configuration */
+
+/* .traffic-nav-link {
+    
+} */
+
 /* Media Queries for larger screens */
 
 @media (min-width: 768px) {
