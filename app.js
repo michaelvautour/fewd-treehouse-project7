@@ -24,29 +24,29 @@ const recentMemberJoins = [{
     }
 ];
 
-const recentActivity = [{
+const recentActivitys = [{
     img: "img/member-1.jpg",
     pName: "Kara Ace",
-    comment: "commented on the importance of So Say We All",
+    comment: "the importance of So Say We All",
     time: "2 hours ago"
     },
 
     {img: "img/member-2.jpg",
     pName: "Jeffery Sheridan",
-    comment: "liked the post Babylon 5 greatest characters!",
+    comment: "how awesome Babylon 5 characters are!",
     time: "3 hours ago"
     },
 
     {img: "img/member-3.jpg",
     pName: "Eliza Curator",
-    comment: "commented Spike & Angel join the avengers",
+    comment: "how Spike & Angel should join the avengers",
     time: "5 hours ago"
     },
 
     {img: "img/member-4.jpg",
     pName: "Sami Tarsa",
-    comment: "sami.tarsa@madeupurl.com",
-    time: "on how Castiel faced off against Chuck"
+    comment: "how Castiel faced off against Chuck",
+    time: "7 hours ago"
     }
 ];
 
@@ -90,25 +90,24 @@ const newMembers = () => {
 newMembers();
 
 const newPosts = () => {
-    for (i = 0; i < recentMemberJoins.length; i++) {
+    for (i = 0; i < recentActivitys.length; i++) {
         let h3Activity = document.getElementsByClassName("newActivity")[0]
         let createDiv = document.createElement("div")
         let createSecondDiv = document.createElement("div")
         let createImg = document.createElement('img')
         let createP = document.createElement('p')
         let secondP = document.createElement('p')
-        const recentMemberJoin = recentMemberJoins[i]
+        const recentActivity = recentActivitys[i]
 
         // creates the elements
         createDiv.classList.add('recent-container')
         createImg.classList.add('profile-image')
-        createImg.src= recentMemberJoin.img;
+        createImg.src= recentActivity.img;
         createSecondDiv.classList.add("recent-text")
-        createP.textContent = recentMemberJoin.pName
-        createLink.textContent = recentMemberJoin.comment
-        secondP.textContent = recentMemberJoin.time
+        createP.textContent = recentActivity.pName + " commented on " + recentActivity.comment
+        secondP.textContent = recentActivity.time
 
-    
+
         // inserts the elements into the DOM
         createDiv.append(createImg);
         createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
@@ -119,5 +118,7 @@ const newPosts = () => {
         // below inserts index > 0 into the DOM positioning
         var referenceNode = document.getElementsByClassName('recent-container')
         referenceNode[i].parentNode.insertBefore(createDiv, referenceNode[i].nextSibling);
+    }
 }
-}
+
+newPosts()
