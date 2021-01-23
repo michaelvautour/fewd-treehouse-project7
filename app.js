@@ -24,8 +24,6 @@ const recentMemberJoins = [{
     }
 ];
 
-
-
 const newMembers = () => {
     for (i = 0; i < recentMemberJoins.length; i++) {
         let h3Member = document.getElementsByClassName("newMembers")[0]
@@ -35,8 +33,10 @@ const newMembers = () => {
         let createImg = document.createElement('img')
         let createP = document.createElement('p')
         let createLink = document.createElement('a')
+        var referenceNode = document.getElementsByClassName('members-container')
         const recentMemberJoin = recentMemberJoins[i]
-        // console.log(recentMemberJoin)
+
+        // creates the elements
         createDiv.classList.add('members-container')
         createImg.classList.add('profile-image')
         createImg.src= recentMemberJoin.img;
@@ -46,13 +46,17 @@ const newMembers = () => {
         createLink.href= '#'
         createThirdDiv.textContent=recentMemberJoin.lastPost
 
-        h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
-        createDiv.appendChild(createImg);
+    
+        // inserts the elements into the DOM
+        createDiv.append(createImg);
         createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
-        createSecondDiv.appendChild(createP)
-        createSecondDiv.appendChild(createLink)
-        createDiv.appendChild(createThirdDiv)
-        // console.log(createThirdDiv)
+        createSecondDiv.append(createP)
+        createSecondDiv.append(createLink)
+        createDiv.append(createThirdDiv)
+        // below inserts the first index into the dom
+        h3Member.parentNode.insertBefore(createDiv, h3Member.nextSibling);
+        // below inserts index > 0 into the DOM positioning
+        referenceNode[i].parentNode.insertBefore(createDiv, referenceNode[i].nextSibling);
     }      
 }
 
