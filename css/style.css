@@ -1,6 +1,6 @@
 img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .social-image {
@@ -64,7 +64,7 @@ nav a {
 
 /* Media Queries for larger screens */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas:
@@ -90,7 +90,12 @@ nav a {
     }
 
     nav a {
-    margin-top: 25px;
+        padding: 0;
+        padding-left: 5px;
+    }
+
+    nav img {
+    padding-top: 25px;
     padding-left: 0;
     }
 }
@@ -99,4 +104,4 @@ nav a {
     .widget-container-full, .widget-container-half {
         width: 95vw;
     }
-}
+} */
