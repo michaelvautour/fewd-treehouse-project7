@@ -9,7 +9,8 @@ img {
 
 .top-profile-image,
 .profile-image,
-.members-image {
+.members-image,
+.recent-image {
     border-radius: 1rem;
 }
 
@@ -248,18 +249,66 @@ svg {
     grid-column-end: 4;
 }
 
-.members-container p {
+.members-container p,
+.recent-container {
     font-size: 1em;
     font-family: 'Times New Roman', Times, serif;
     padding-bottom: 7px;
     margin-top: 0;
 }
 
-.members-container a {
+.members-container a  {
     color: #7377bf;
     font-weight: normal;
     font-family: cursive;
 }
+
+/* GRID: Recent Activites */
+
+.recent-container {
+    display: grid;
+    grid-template-columns: 12fr 1fr 1fr;
+    max-height: 7em;
+    padding: 10px 5px;
+    margin: 0 1em;
+    font-size: .9em;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 15px;
+    
+}
+
+.recent-image {
+    grid-row-start: 1;
+    grid-column-end: 1;
+    margin-right: 25px;
+    align-self: center;
+}
+
+.recent-text,
+.recent-post {
+    grid-row-start: 1;
+    grid-column-end: 2;
+}
+
+.recent-text {
+    align-self: start;
+    padding-bottom: 15px;
+}
+.recent-post {
+    align-self: end;
+}
+
+.recent-link {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.recent-container a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #7377bf;
+}
+
 
 
 /* Media Queries for larger screens */

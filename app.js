@@ -76,7 +76,6 @@ const newMembers = () => {
 
         // inserts the elements into the DOM
         createDiv;
-        // createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
         createDiv.append(createImg)
         createDiv.append(createP)
         createDiv.append(createLink)
@@ -97,28 +96,35 @@ const newPosts = () => {
     for (i = 0; i < recentActivitys.length; i++) {
         let h3Activity = document.getElementsByClassName("newActivity")[0]
         let createDiv = document.createElement("div")
-        let createSecondDiv = document.createElement("div")
         let createImg = document.createElement('img')
         let createP = document.createElement('p')
         let secondP = document.createElement('p')
+        let createA = document.createElement('a')
         const recentActivity = recentActivitys[i]
 
         // creates the elements
         createDiv.classList.add('recent-container')
-        createImg.classList.add('profile-image')
+        createImg.classList.add('recent-image')
         createImg.src= recentActivity.img;
-        createSecondDiv.classList.add("recent-text")
+        createP.classList.add("recent-text")
         createP.textContent = recentActivity.pName + " commented on " + recentActivity.comment
+        secondP.classList.add('recent-post')
         secondP.textContent = recentActivity.time
+        createA.classList.add('recent-link')
+        createA.href= "#"
+        createA.textContent=">"
 
 
         // inserts the elements into the DOM
-        createDiv.append(createImg);
-        createImg.parentNode.insertBefore(createSecondDiv, createImg.nextSibling);
-        createSecondDiv.append(createP)
-        createSecondDiv.append(secondP)
+        createDiv.append;
+        createDiv.append(createImg)
+        createDiv.append(createP)
+        createDiv.append(secondP)
+        createDiv.append(createA)
+
         // below inserts the first index into the dom
         h3Activity.parentNode.insertBefore(createDiv, h3Activity.nextSibling);
+
         // below inserts index > 0 into the DOM positioning
         var referenceNode = document.getElementsByClassName('recent-container')
         referenceNode[i].parentNode.insertBefore(createDiv, referenceNode[i].nextSibling);
