@@ -209,10 +209,6 @@ input[type=search] {
 .daily,
 .mobile,
 .social-container,
-.members,
-.recent-activity,
-.message,
-.settings,
 .alert-settings {
     padding-left: 30px;
     padding-right: 30px;
@@ -220,26 +216,57 @@ input[type=search] {
     padding-bottom: 25px;
 }
 
-/* Social Area */
+
+/* GRID Social Area */
 
 /* For testing can see the social icon better till I fix positioning */
-/* .social-icon {
-    fill: #fff;
-} */
 
 .social-image {
-    width: 100px;
-    height: 100px;
-    background: rgb(115, 119, 191);
-    /* border-radius: 50%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid grey;
+    background-color: rgb(244, 244, 244);
+    margin-bottom: 25px;
 }
 
 svg {
-    width: 50%; 
-    height: 50%;
-    display: flex;
-    /* margin-left: 25px; */
+    background: rgb(115, 119, 191);
+    grid-row-start: 1;
+    grid-column-start: 1;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin-left: 125px;
 }
+
+
+.social-platform {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    color: #7377bf;
+    margin-left: 225px;
+
+}
+
+.social-number {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    font-size: 2em;
+    margin-left: 225px;
+    margin-top: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+svg,
+.social-platform {
+    margin-top:15px;
+}
+
+
+.social-icon {
+    fill: white;
+}
+
 
 /* GRID: New Members Area */
 
@@ -345,6 +372,12 @@ svg {
 .widget-container {
     display: flex;
     flex-direction: column;
+}
+
+.message {
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+
 }
 .button-primary{
     font-size: 0.85em;
