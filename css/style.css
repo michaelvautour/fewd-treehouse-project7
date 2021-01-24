@@ -214,47 +214,51 @@ svg {
 .members-container {
     display: grid;
     grid-template-columns: 1.5fr 8fr 1fr;
-    /* max-height: 6em; */
-    padding: 20px 5px;
-    height: 100px;
+    max-height: 5em;
+    padding: 10px 5px;
     margin: 0 1em;
     font-size: .9em;
     border-bottom: 1px solid lightgrey;
     padding-top: 15px;
-}
-
-.member-container > img {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    
 }
 
 .members-image {
-    align-items: center;
+    grid-row-start: 1;
+    grid-column-end: 1;
+    margin-right: 25px;
+    align-self: center;
 }
 
 .members-name,
 .members-email {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin-bottom: 0;
+    grid-row-start: 1;
+    grid-column-end: 2;
+}
+.members-name {
+    align-self: start;
+    margin-bottom: 15px;
+}
+.members-email {
+    align-self: end;
+}
+
+.members-jdate {
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
 .members-container p {
     font-size: 1em;
     font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 7px;
+    margin-top: 0;
 }
 
 .members-container a {
     color: #7377bf;
     font-weight: normal;
     font-family: cursive;
-}
-
-.members-jdate {
-    text-align: right;
-    margin-top: 0;
 }
 
 
