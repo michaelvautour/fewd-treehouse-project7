@@ -7,12 +7,9 @@ img {
     height: 35px;
 }
 
-.social-image {
-    width: 50px;
-    height: 50px;
-}
-
-.profile-image {
+.top-profile-image,
+.profile-image,
+.members-image {
     border-radius: 1rem;
 }
 
@@ -91,8 +88,6 @@ h3 {
 }
 
 
-
-
 /* NAV Layout */
 
 nav {
@@ -141,7 +136,9 @@ input[type=search] {
 .traffic h3,
 .daily h3,
 .mobile h3,
-.social-container {
+.social-container,
+.newMembers,
+.newActivity {
     color: grey;
 }
 
@@ -182,7 +179,9 @@ input[type=search] {
 .traffic,
 .daily,
 .mobile,
-.social-container {
+.social-container,
+.members,
+.recent-activity {
     padding-left: 30px;
     padding-right: 30px;
     border-bottom: 1px solid lightgrey;
@@ -191,22 +190,71 @@ input[type=search] {
 
 /* Social Area */
 
-
-
-.social-icon {
+/* For testing can see the social icon better till I fix positioning */
+/* .social-icon {
     fill: #fff;
-}
+} */
 
 .social-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: rgb(115, 119, 191);
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
-.social-icon svg {
-    height: 4em;
-    width: 4em;
+svg {
+    width: 50%; 
+    height: 50%;
+    display: flex;
+    /* margin-left: 25px; */
+}
+
+/* GRID: New Members Area */
+
+.members-container {
+    display: grid;
+    grid-template-columns: 1.5fr 8fr 1fr;
+    /* max-height: 6em; */
+    padding: 20px 5px;
+    height: 100px;
+    margin: 0 1em;
+    font-size: .9em;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 15px;
+}
+
+.member-container > img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.members-image {
+    align-items: center;
+}
+
+.members-name,
+.members-email {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 0;
+}
+
+.members-container p {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.members-container a {
+    color: #7377bf;
+    font-weight: normal;
+    font-family: cursive;
+}
+
+.members-jdate {
+    text-align: right;
+    margin-top: 0;
 }
 
 
