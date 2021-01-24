@@ -63,12 +63,17 @@ let myChart = new Chart(chartArea, {
         }]
     },
     options: {
-        
+        animation: {
+            duration: 250
+            },
         legend: {
             display: false,
                 
         scales: {
-            yAxes: [{
+            xAxes: [{
+                offset: false
+             }],             
+             yAxes: [{
                 ticks: {
                     beginAtZero: true
                     }
@@ -111,14 +116,13 @@ chartTypeToggle.addEventListener('click', (e) => {
         pButton.classList.add('chartTypeselected');
         if (pButton.textContent === "pie") {
             myChart.config.type = pButton.textContent
-            myChart.update()
         } else if (pButton.textContent === "bar") {
             myChart.config.type = pButton.textContent
-            myChart.update()
         } else if (pButton.textContent === "line") {
             myChart.config.type = pButton.textContent
-            myChart.update()
         }
+    myChart.update()
+
 }
 });
 
