@@ -1,8 +1,9 @@
 let chartArea = document.getElementById('myChart');
+let dailyChartArea = document.getElementById('daily-chart');
+let mobileChartArea = document.getElementById('mobile-chart');
+
 const chartToggle = document.getElementById('traffic-id');
 const chartTypeToggle = document.getElementById('chart-id');
-let dailyChartArea = document.getElementById('daily-chart');
-
 
 let timingTraffic = [{
     labels: ['0-4', '5-8', '9-12', '13-17', '18-21', '22-24'],
@@ -27,8 +28,13 @@ let timingTraffic = [{
     label: ['Monthly Site Traffic'],
     data: [5000, 6350, 5100, 5550, 5250, 6550, 6750, 4800, 4950, 5850, 6750, 5650]
 },
-
 ];
+
+let platformUsers = [{
+    labels: ['Desktop', 'Phones', 'Tablets'],
+    label: ['Platform Type Usage'],
+    data: [180, 392, 50]
+}]
 
 let myChart = new Chart(chartArea, {
     type: 'line', // Types of charts: line, bar, radar, doughnut & pie, polar area, bubble, scatter
@@ -132,6 +138,55 @@ let dailyChart = new Chart(dailyChartArea, {
             }
     }}
 })
+
+
+let mobileChart = new Chart(mobileChartArea, {
+    type: 'pie', // Types of charts: line, bar, radar, doughnut & pie, polar area, bubble, scatter
+    data: {
+        labels: platformUsers[0].labels,
+        datasets: [{
+            label: platformUsers[0].label,
+            data: platformUsers[0].data,
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+            ],
+            // borderColor: [
+            //     'rgba(255, 99, 132, 1)',
+            //     'rgba(54, 162, 235, 1)',
+            //     'rgba(255, 206, 86, 1)',
+            //     'rgba(75, 192, 192, 1)',
+            //     'rgba(153, 102, 255, 1)',
+            //     'rgba(255, 159, 64, 1)'
+            // ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        animation: {
+            duration: 250
+            },
+        legend: {
+            display: true,
+            position: 'right',
+            labels: {
+                fontSize: 35
+            },
+        
+        scales: {
+            xAxes: [{
+                offset: false
+             }],             
+             yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                    }
+                }]
+            }
+    }}
+})
+
 
 function updateChart(arr, index) {
     myChart.data.datasets[0].data = arr[index].data
