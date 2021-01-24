@@ -229,7 +229,7 @@ input[type=search] {
     margin-bottom: 25px;
 }
 
-svg {
+.social-image svg {
     background: rgb(115, 119, 191);
     grid-row-start: 1;
     grid-column-start: 1;
@@ -257,7 +257,7 @@ svg {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-svg,
+.social-image svg,
 .social-platform {
     margin-top:15px;
 }
