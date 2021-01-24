@@ -1,6 +1,8 @@
 let chartArea = document.getElementById('myChart');
 const chartToggle = document.getElementById('traffic-id');
 const chartTypeToggle = document.getElementById('chart-id');
+let dailyChartArea = document.getElementById('daily-chart');
+
 
 let timingTraffic = [{
     labels: ['0-4', '5-8', '9-12', '13-17', '18-21', '22-24'],
@@ -9,7 +11,7 @@ let timingTraffic = [{
 },
 
 {
-    labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     label: ['Daily Site Traffic'],
     data: [75, 145, 95, 132, 102, 89, 112]
 },
@@ -82,6 +84,55 @@ let myChart = new Chart(chartArea, {
     }}
 })
 
+
+
+let dailyChart = new Chart(dailyChartArea, {
+    type: 'bar', // Types of charts: line, bar, radar, doughnut & pie, polar area, bubble, scatter
+    data: {
+        labels: timingTraffic[1].labels,
+        datasets: [{
+            label: '# of hits',
+            data: timingTraffic[1].data,
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+            ],
+            // borderColor: [
+            //     'rgba(255, 99, 132, 1)',
+            //     'rgba(54, 162, 235, 1)',
+            //     'rgba(255, 206, 86, 1)',
+            //     'rgba(75, 192, 192, 1)',
+            //     'rgba(153, 102, 255, 1)',
+            //     'rgba(255, 159, 64, 1)'
+            // ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        animation: {
+            duration: 250
+            },
+        legend: {
+            display: false,
+                
+        scales: {
+            xAxes: [{
+                offset: false
+             }],             
+             yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                    }
+                }]
+            }
+    }}
+})
+
 function updateChart(arr, index) {
     myChart.data.datasets[0].data = arr[index].data
     myChart.data.datasets[0].label = arr[index].label
@@ -122,7 +173,6 @@ chartTypeToggle.addEventListener('click', (e) => {
             myChart.config.type = pButton.textContent
         }
     myChart.update()
-
 }
 });
 

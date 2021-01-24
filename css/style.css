@@ -133,11 +133,15 @@ input[type=search] {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-
 .traffic h3 {
-    color: grey;
-    align-items: center;
     margin-bottom: -40px;
+}
+
+
+.traffic h3,
+.daily h3,
+.mobile h3 {
+    color: grey;
 }
 
 /* Button Configuration */
@@ -174,7 +178,9 @@ input[type=search] {
     margin-right: 25%;
 }
 
-.traffic {
+.traffic,
+.daily,
+.mobile {
     padding-left: 30px;
     padding-right: 30px;
 }
