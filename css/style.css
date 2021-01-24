@@ -140,7 +140,8 @@ input[type=search] {
 
 .traffic h3,
 .daily h3,
-.mobile h3 {
+.mobile h3,
+.social-container {
     color: grey;
 }
 
@@ -180,9 +181,32 @@ input[type=search] {
 
 .traffic,
 .daily,
-.mobile {
+.mobile,
+.social-container {
     padding-left: 30px;
     padding-right: 30px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 25px;
+}
+
+/* Social Area */
+
+
+
+.social-icon {
+    fill: #fff;
+}
+
+.social-image {
+    width: 80px;
+    height: 80px;
+    background: rgb(115, 119, 191);
+    border-radius: 50%;
+}
+
+.social-icon svg {
+    height: 4em;
+    width: 4em;
 }
 
 
