@@ -75,15 +75,23 @@
     <section class="traffic">
         <div class="traffic-header">
             <h3>Traffic</h3>
-            <ul class="traffic-nav">
+            <ul class="traffic-nav" id="traffic-id">
                 <li class="traffic-nav-link">Hourly</li>
                 <li class="traffic-nav-link">Daily</li>
-                <!-- Might add class of active to set one as default showing -->
-                <li class="traffic-nav-link selected">Weekly</li>
+                <li class="traffic-nav-link chartSelected">Weekly</li>
                 <li class="traffic-nav-link">Monthly</li>
             </ul>
 
             <canvas id="myChart"></canvas>
+
+        <div class="traffic-charts">
+            <ul class="traffic-nav" id="chart-id">
+                <li class="traffic-nav-link">pie</li>
+                <li class="traffic-nav-link">bar</li>
+                <!-- Might add class of active to set one as default showing -->
+                <li class="traffic-nav-link chartTypeselected">line</li>
+            </ul>
+
 
         </div>
         <div class="widget-container-full">

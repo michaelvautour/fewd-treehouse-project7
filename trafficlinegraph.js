@@ -1,4 +1,6 @@
 let chartArea = document.getElementById('myChart');
+const chartToggle = document.getElementById('traffic-id');
+const chartTypeToggle = document.getElementById('chart-id');
 
 let timingTraffic = [{
     labels: ['0-4', '5-8', '9-12', '13-17', '18-21', '22-24'],
@@ -75,7 +77,6 @@ let myChart = new Chart(chartArea, {
     }}
 })
 
-
 function updateChart(arr, index) {
     myChart.data.datasets[0].data = arr[index].data
     myChart.data.datasets[0].label = arr[index].label
@@ -83,18 +84,41 @@ function updateChart(arr, index) {
     myChart.update();
 }
 
-// Weekly & Daily, Monthly, need to replace above data / labels based on button clicks
 
-// 107 per day
-// Chart labels would be 'S', 'M', 'T', 'W', 'T', 'F', 'S'
-// data array would be 75, 145, 95, 132, 102, 89, 112
+chartToggle.addEventListener('click', (e) => {
+    const pButton = e.target;
+    let selectedButton = pButton.textContent
+    document.querySelector('.chartSelected').classList.remove('chartSelected')
+    if (pButton.textContent === selectedButton && pButton.classList != "chartSelected") {
+        pButton.classList.add('chartSelected');
+        if (pButton.textContent === "Hourly") {
+            updateChart(timingTraffic, 0)
+        } else if (pButton.textContent === "Daily") {
+            updateChart(timingTraffic, 1)
+        } else if (pButton.textContent === "Weekly") {
+            updateChart(timingTraffic, 2)
+        } else if (pButton.textContent === "Monthly") {
+            updateChart(timingTraffic, 3)
+        }
+}
+});
 
+chartTypeToggle.addEventListener('click', (e) => {
+    const pButton = e.target;
+    let selectedButton = pButton.textContent
+    document.querySelector('.chartTypeselected').classList.remove('chartTypeselected')
+    if (pButton.textContent === selectedButton && pButton.classList != "chartTypeselected") {
+        pButton.classList.add('chartTypeselected');
+        if (pButton.textContent === "pie") {
+            myChart.config.type = pButton.textContent
+            myChart.update()
+        } else if (pButton.textContent === "bar") {
+            myChart.config.type = pButton.textContent
+            myChart.update()
+        } else if (pButton.textContent === "line") {
+            myChart.config.type = pButton.textContent
+            myChart.update()
+        }
+}
+});
 
-
-// Hourly
-// Chart Labels be 0-4, 5-8, 9-12, 13-17, 18-21, 22-24
-// data array would be: 13, 24, 15, 22, 17, 14, 18
-
-// Monthly
-// Chart labels be: 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-// data array would be: 5000, 6850, 5100, 8100, 5250, 7000, 6750, 4300, 8550, 5850, 6750, 7250

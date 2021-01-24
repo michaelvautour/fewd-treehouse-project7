@@ -160,7 +160,8 @@ input[type=search] {
     background-color: #5ccf95;
 }
 
-.selected {
+.chartSelected,
+.chartTypeselected {
     background-color: #5ccf95;
     font-weight: bold;
     color: white
@@ -189,7 +190,7 @@ input[type=search] {
         "nav main";
     }
 
-    .main {
+    /* .main {
         display: grid;
         grid-template-columns: 50%;
     }
@@ -204,7 +205,7 @@ input[type=search] {
 
     .mobile, .activity, .settings {
         grid-column: 2 / span 1;
-    }
+    } */
 
     nav {
         padding-top: 25px;
