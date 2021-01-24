@@ -185,8 +185,8 @@
         <h3>Messager User</h3>
 
         <form class="widget-container">
-            <input type="text" placeholder="Search for user" class="form-field" id="userField">
-            <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+            <input type="text" placeholder="Search for User" class="form-field" id="userField">
+            <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
             <button class="button-primary" id="send">Send</button>
         </form>
 
@@ -194,29 +194,37 @@
 
     <!--  local settings widget   -->
 
-    <section>
+    <section class="settings">
         <h3>Settings</h3>
-
+        <div class="section-widget">
         <!-- Custom CSS toggle code -->
-
-        <select class="form-field" id ="tiemzone">
-            <option disabled selected>Select a Timezone</option>
-            <option>Newfoundland Standard Time</option>
-            <option>Atlantic Standard Time</option>
-            <option>Eastern Standard Time</option>
-            <option>Central Standard Time</option>
-            <option>Mountain Standard Time</option>
-            <option>Pacific Standard Time</option>
-
-            <!-- List more options -->
-        </select>
-        <div class="settings-button">
-            <button class="button-primary" id="save">Save</button>
-            <button class="button-disabled" id="cancel">Cancel</button>
+            <p class="send-email">Send Email Notifications</p>
+            <label class="switch switch1">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <p class="send-profile">Send Profile to Public</p>
+            <label class="switch switch2">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            <select class="form-field" id ="timezone">
+                <option disabled selected>Select Timezone</option>
+                <option>Newfoundland Standard Time</option>
+                <option>Atlantic Standard Time</option>
+                <option>Eastern Standard Time</option>
+                <option>Central Standard Time</option>
+                <option>Mountain Standard Time</option>
+                <option>Pacific Standard Time</option>
+            </select>
+            <button class="button-set-primary" id="save">Save</button>
+            <button class="button-set-disabled" id="cancel">Cancel</button>
         </div>
     </section>
-
-
+<br>
+<br><br><br><br><br>
+<br>
+<br>
 </main>
 
 </body>
