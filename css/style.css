@@ -572,6 +572,7 @@ input:checked + .slider:before {
 }
 
 
+
 /* Media Queries for larger screens */
 
 @media (min-width: 768px) {
@@ -630,9 +631,38 @@ input:checked + .slider:before {
     margin-left: 25px;
 }
 
-
+.members-activity {
+    display: flex;
+    width: 90vw;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
 
 }
+
+.members,
+.recent-activity {
+    min-width: 45vw;
+}
+
+.members-container {
+    height: 6.1em;
+
+}
+.recent-container {
+    height: 5.4em;
+}
+
+.recent-activity,
+.newMembers {
+    border-bottom: none;
+}
+.members {
+    border-right: 1px solid lightgrey;
+}
+
+}
+
+
 
 /* @media (min-width: 1024px) {
     .widget-container-full, .widget-container-half {
