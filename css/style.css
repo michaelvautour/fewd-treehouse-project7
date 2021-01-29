@@ -209,7 +209,11 @@ input[type=search] {
 .daily,
 .mobile,
 .social-container,
-.alert-settings {
+.alert-settings,
+.newMembers,
+.recent-activity,
+.message,
+.settings {
     padding-left: 30px;
     padding-right: 30px;
     border-bottom: 1px solid lightgrey;
@@ -594,7 +598,14 @@ input:checked + .slider:before {
     }
 
 
-    
+    /* .social-container {
+        display: flex;
+    } */
+
+/* .social-container-all {
+    display: flex;
+} */
+
 /* 
     .traffic, .social {
         grid-column: 1 / span 2;
