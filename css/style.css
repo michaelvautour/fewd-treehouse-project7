@@ -505,6 +505,7 @@ input[type=text] {
 .button-set-disabled {
     grid-column-start: 2;
     grid-row-start: 4;
+    grid-row-end: 6
 }
 
 /* Code modified based on w3schools how-to area: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch 
@@ -614,7 +615,7 @@ input:checked + .slider:before {
         font-size: 0.85em; */
 
 
-}
+/* } */
 
 /* @media (min-width: 1024px) {
     .widget-container-full, .widget-container-half {
