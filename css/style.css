@@ -597,46 +597,39 @@ input:checked + .slider:before {
         min-width: 45vw;
     }
 
+.social-container {
+    display: grid;
+    max-width: 90vw;
+}
 
-    /* .social-container {
-        display: flex;
-    } */
+.social-stats {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.facebook {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
 
-/* .social-container-all {
-    display: flex;
-} */
+.google {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
 
-/* 
-    .traffic, .social {
-        grid-column: 1 / span 2;
-    } */
+.twitter {
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
 
-    /* .daily, .members, .message{
-        grid-column: 1 / span 1;
-    } */
-/* 
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-    } */
+.social-platform,
+.social-number {
+    margin-left: 115px;
+}
 
-    /* nav {
-        padding-top: 25px;
-    }
-    nav a {
-        padding: 0;
-        padding-left: 5px;
-    }
+.social-image svg {
+    margin-left: 25px;
+}
 
-    nav img {
-        padding-left: 5px;
-    }
-
-    .traffic-nav {
-        text-align: right;
-    }
-
-    .traffic-nav-link {
-        font-size: 0.85em; */
 
 
 }
