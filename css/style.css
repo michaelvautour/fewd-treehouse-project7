@@ -677,6 +677,11 @@ input:checked + .slider:before {
     border-right: 1px solid lightgrey;
 }
 
+.button-set-primary,
+.button-set-disabled {
+    margin-top: 28px;
+}
+
 }
 
 
