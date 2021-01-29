@@ -576,27 +576,27 @@ input:checked + .slider:before {
 /* Media Queries for larger screens */
 
 @media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-areas:
-        "header header"
-        "nav main";
-    }
+.grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+    "header header"
+    "nav main";
+}
 
-    .main { 
-        display: grid;
-        grid-template-columns: 95%;
-    }
+.main { 
+    display: grid;
+    grid-template-columns: 95%;
+}
 
-    .widgets{
-        display: flex;
-        width: 90vw;
-    }
+.widgets{
+    display: flex;
+    width: 90vw;
+}
 
-    .daily,
-    .mobile {
-        min-width: 45vw;
-    }
+.daily,
+.mobile {
+    min-width: 45vw;
+}
 
 .social-container {
     display: grid;
@@ -652,11 +652,28 @@ input:checked + .slider:before {
     height: 5.4em;
 }
 
+.recent-activity {
+    padding-top: 10px;
+}
 .recent-activity,
 .newMembers {
     border-bottom: none;
 }
 .members {
+    border-right: 1px solid lightgrey;
+}
+
+.messaging{
+    display: flex;
+    width: 90vw;
+}
+
+.message,
+.settings {
+    min-width: 45vw;
+}
+
+.message {
     border-right: 1px solid lightgrey;
 }
 
