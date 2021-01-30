@@ -686,17 +686,30 @@ input:checked + .slider:before {
 
 
 
-/* @media (min-width: 1024px) {
-    .widget-container-full, .widget-container-half {
-        width: 80vw;
-    }
+@media (min-width: 1024px) {
 
-    .headline {
+    /* .headline {
         text-align: left;
         padding-left: 35px;
-    }
+    } */
 
-    .main-header {
-        display: flex;
-    }
-}} */
+.main-header {
+    display: grid;
+}
+
+.headline {
+    align-content: left;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.main-header-search {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    min-width: 500px;
+}
+
+
+}
