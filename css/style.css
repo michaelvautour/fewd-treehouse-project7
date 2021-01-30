@@ -711,5 +711,8 @@ input:checked + .slider:before {
     min-width: 500px;
 }
 
+.traffic-nav {
+    text-align: right;
+}
 
 }
