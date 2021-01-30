@@ -19,6 +19,11 @@ header .bell-icn {
     fill: white;
   }
 
+header .bell-icn:hover {
+    fill: orangered;
+    width: 30px;
+}
+
 /* Alert box */
 
 .alert {
