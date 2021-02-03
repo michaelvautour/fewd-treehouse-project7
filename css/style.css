@@ -24,6 +24,16 @@ header .bell-icn:hover {
     width: 30px;
 }
 
+.notification-grn-dot {
+    width: 10px;
+    height: 10px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: 15px;
+}
+
 /* Alert box */
 
 .alert {
